@@ -1,0 +1,14 @@
+﻿<script>
+    function OtherDynamicJsFunction() {
+        document.writeln("ejecutando JS dinamico desde: @Request.RawUrl...")
+        @if (Request.QueryString.HasKeys())
+        {
+            foreach (string key in Request.QueryString.Keys)
+            {
+                @:{ document.writeln("QueryString => "); }
+                @:{ document.writeln("Key: @key , Value: @Request.QueryString[key]"); }
+                
+            }
+        }
+    }
+</script>

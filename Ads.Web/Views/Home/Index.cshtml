@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home page";
+}
+
+<link href="~/Styles/static.css" rel="stylesheet" />
+<link href="~/Styles/dynamic.css?color=grey" rel="stylesheet" />
+<script src="~/Scripts/static.js"></script>
+<script src="~/Scripts/dynamicWithModel.js?message=Hello%20world&p1=llamada desde qs"></script>
+<script src="~/Scripts/otherDynamic.js"></script>
+ 
+<h2 class="dynamicCss">@ViewBag.Title</h2>
+ 
+<script>
+    StaticJsFunction();
+    DynamicJsFunction();
+    OtherDynamicJsFunction();
+</script>
