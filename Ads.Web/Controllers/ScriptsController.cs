@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ads.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,12 @@ namespace Ads.Web.Controllers
         public ActionResult Dynamic(string message)
         {
             return this.JavaScriptFromView(model: message);
+        }
+
+        [ActionName("Persona.js")]
+        public ActionResult Persona()
+        {
+            return this.JavaScriptFromView(model: new PersonaViewModel());
         }
 
         public ActionResult Index()

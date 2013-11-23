@@ -1,0 +1,21 @@
+﻿@model Ads.Web.Models.PersonaViewModel
+
+<script>
+function PersonaModel() {
+    document.writeln("<p>PersonaModel: ejecutando JS dinamico desde: @Request.RawUrl...</p>")
+    @if (Model != null)
+    {
+        @: { document.writeln("<p>Nombre: @Model.Nombre</p>"); }
+        @: { document.writeln("<p>Apellido: @Model.Apellido</p>"); }
+        @: { document.writeln("<p>Edad: @Model.Edad</p>"); }
+    }
+    @if (Request.QueryString.HasKeys())
+    {
+        foreach (string key in Request.QueryString.Keys)
+        {
+            @:{ document.writeln("<p>QueryString => Key: @key , Value: @Request.QueryString[key]</p>"); }
+        }
+    }
+}
+</script>
+

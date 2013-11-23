@@ -108,6 +108,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\PersonaViewModel.cs" />
     <Compile Include="MvcExtensions.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ScriptsController.cs" />
@@ -135,7 +136,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -151,6 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Scripts\OtherDynamic.js.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Scripts\Persona.js.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
