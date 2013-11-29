@@ -155,6 +155,19 @@
   <ItemGroup>
     <Content Include="Views\Scripts\Persona.js.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ads.Domain\Ads.Domain.csproj">
+      <Project>{f8837354-5390-4e39-8ded-19acbf1f3b88}</Project>
+      <Name>Ads.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ads.Repository\Ads.Repository.csproj">
+      <Project>{ffafa0ac-731e-4c2b-8a9c-091b9ca3efe8}</Project>
+      <Name>Ads.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Saludar.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
