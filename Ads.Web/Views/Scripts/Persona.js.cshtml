@@ -1,13 +1,13 @@
-﻿@model Ads.Web.Models.PersonaViewModel
+﻿@model PersonaViewModel
 
 <script>
 function PersonaModel() {
     document.writeln("<p>PersonaModel: ejecutando JS dinamico desde: @Request.RawUrl...</p>")
     @if (Model != null)
     {
-        @: { document.writeln("<p>Nombre: @Model.Nombre</p>"); }
-        @: { document.writeln("<p>Apellido: @Model.Apellido</p>"); }
-        @: { document.writeln("<p>Edad: @Model.Edad</p>"); }
+        @: { document.writeln("<p>Nombre: @Model.Personas.First().Nombre</p>"); }
+        @: { document.writeln("<p>Apellido: @Model.Personas.First().Apellido</p>"); }
+        @: { document.writeln("<p>Sexo: @Model.Personas.First().Sexo</p>"); }
     }
     @if (Request.QueryString.HasKeys())
     {
