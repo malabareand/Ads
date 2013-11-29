@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ads.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,12 @@ namespace Ads.Web.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpGet]
+        public ViewResult Saludar()
+        {
+            return View(new PersonaViewModel());
         }
     }
 }
